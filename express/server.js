@@ -75,6 +75,10 @@ router.get('/questions', (req, res) => {
   res.status(200).json({ questions: questions });
 });
 
+router.post('/answer', (req, res) => {
+   res.status(200).json({ status: ok });
+});
+
 // router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 app.use('/.netlify/functions/server', router);  // path must route to lambda
