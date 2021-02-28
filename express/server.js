@@ -73,10 +73,10 @@ router.get('/questions', (req, res) => {
   res.status(200).json({ questions: questions });
 });
 
-router.post('/', (req, res) => res.json({ postBody: req.body }));
+// router.post('/', (req, res) => res.json({ postBody: req.body }));
 
 
-app.use('/.netlify/functions/api', router);  // path must route to lambda
+app.use('/.netlify/functions/server', router);  // path must route to lambda
 app.use('/', (req, res) => res.sendFile(path.join(__dirname, '../index.html')));
 
 module.exports = app;
