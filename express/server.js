@@ -63,7 +63,7 @@ const questions = [
 
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname));
+// app.use(express.static(__dirname));
 
 const router = express.Router();
 
